@@ -54,11 +54,25 @@ public class Main {
         throws BadLocationException
     {
       if (fb.getDocument() != null) {
-        super.replace(fb, offset, lengthToDelete, stringToAdd, attr);
+        if (isNumeric(stringToAdd)) {
+          super.replace(fb, offset, lengthToDelete, stringToAdd, attr);
+        }
       }
       else {
         Toolkit.getDefaultToolkit().beep();
       }
+    }
+
+    public static boolean isNumeric(String strNum) {
+      if (strNum == null) {
+        return false;
+      }
+      try {
+        double num = Double.parseDouble(strNum);
+      } catch (NumberFormatException nfe) {
+        return false;
+      }
+      return true;
     }
   }
 
