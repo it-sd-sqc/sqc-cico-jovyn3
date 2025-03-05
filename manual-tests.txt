@@ -61,4 +61,18 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 ## Expected results
 * Should display "Developer" for the user name.
 
+## Expected results
+* Should display "Checked IN" after step 2.
+* Should display "Checked OUT" after step 4.
+
+# Module 5: Allow user to exit on command from the login button
+
+## Test steps
+1. Build and run CiCo.
+2. Enter click the exit button to leave the logged in screen
+
+## Expected results
+* Should display the login screen immediately upon pressing it
+
+
 

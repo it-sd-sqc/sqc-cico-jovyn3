@@ -303,6 +303,13 @@ public class Main {
     labelState.setForeground(Color.magenta);
     panelStatus.add(labelState);
 
+    // Add in a button to Exit this screen early
+    JButton exitButton = new JButton("Exit");
+    exitButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+    exitButton.addActionListener(handler);
+    exitButton.setForeground(Color.red);
+    panelStatus.add(exitButton);
+
     panelStatus.add(Box.createVerticalGlue());
 
     // Error panel ////////////////////////////////////////////////////////////
